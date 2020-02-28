@@ -1,5 +1,11 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+
+struct dog_array{
+    int num_dogs;
+    struct dog** arr;
+};
 
 struct dog{
     char * name; 	// Name of the dog
@@ -10,6 +16,7 @@ struct dog{
 
 struct dog * create_dog(char * name, char * color, uint8_t age, uint8_t weight);
 void delete_dog(struct dog * d);
+void print_dogs(struct dog_array* d);
 
 
 
